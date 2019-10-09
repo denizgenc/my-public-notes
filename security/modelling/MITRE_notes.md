@@ -1,6 +1,6 @@
 MITRE ATT&CK Framework Overview and Application
 =====
-Presented by Jon Oltsik and Travis Farral, 2019-10-09
+Presented by Jon Oltsik and Travis Farral, 2018-10-09
 -----
 Definitions:
 - Behavioural Intelligence
