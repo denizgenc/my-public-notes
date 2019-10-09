@@ -10,8 +10,8 @@ To simplify modelling, there are multiple ways of classifying threats. Two
 examples are the STRIDE threat model, and the DREAD risk assessment model.
 
 To understand the difference between threat and risk:
-    - Threats are potential problems that can arise from a system.
-    - Risk is how severe a threat is
+- Threats are potential problems that can arise from a system.
+- Risk is how severe a threat is
 
 -----
 The STRIDE Threat Model
