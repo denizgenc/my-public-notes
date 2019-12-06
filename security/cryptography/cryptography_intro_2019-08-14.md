@@ -51,6 +51,8 @@ Cryptographic hashes:
     - Avalanche effect
         - If a similar input produces a similar hash, that means that an attacker can narrow
           down their field of search for an input that will collide with another one.
+        - To prevent that from happening, a good cryptographic hash will cause an avalanche
+          effect so that even incredibly small changes result in a very different hash.
         - (Formally: 1 bit change in input causes 50% of bits to flip in hash)
     - What if Eve is a package author which is a backup application, but wants to trick someone
       into downloading a version of the package that sends Eve a copy of the backed up files?
