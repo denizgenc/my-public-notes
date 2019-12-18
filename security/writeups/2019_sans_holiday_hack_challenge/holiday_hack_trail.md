@@ -1,0 +1,3 @@
+Just change the distance value to somewhere near 7900.
+
+I dunno how to do this for Medium and Hard...
