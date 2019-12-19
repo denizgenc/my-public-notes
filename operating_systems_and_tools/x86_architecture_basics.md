@@ -25,3 +25,10 @@ The buses are used as follows:
 2. The data bus is used for the transfer of data between the components
 3. The control bus controls the direction of the flow of data (e.g. Memory -> CPU vs. CPU -> Memory)
 
+### Alternatives to Von Neumann
+The main alternative to the Von Neumann architecture is the Harvard Architecture - the main
+difference being that in Harvard, instructions and data have separate memory and pathways to access.
+This has the advantage that you can't treat instructions as data and data as instructions (safety).
+The disadvantage is that you can't treat instructions as data and data as instructions (speed and
+the feelings of LISP wizards).
+
