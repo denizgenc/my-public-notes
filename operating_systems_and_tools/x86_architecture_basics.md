@@ -61,16 +61,18 @@ The x86 architecture provides 8 general-purpose registers (GPRs). These are:
 - SI (source index, used to point to source in stream operations)
 - DI (destination index, used to point to destination in stream operations)
 
-All of these registers can be addressed in 16-, 32-, and 64-bit modes.
+All of these registers can be accessed in 16-, 32-, and 64-bit modes.
 - Append E to the above register names to represent the register in 32-bit mode (EAX, ECX, EDX...)
 - Append R to the above register names for 64-bit (RAX, RCX, RDX, RSP, RBP...)
-- 8-bit addressing is also available for various registers, in different ways.
+- 8-bit access is also available for various registers, in different ways. Most importantly,
+  registers {A,B,C,D}X have their upper and lower 8 bits accessible using H instead of X for the
+  high half, and L for the low half (e.g. AH, CL, DL...)
 
 Along with the above registers, x86-64 introduced 8 additional GPRs: R8, R9, R10 ... R15. These also
-have different addressing modes:
-- Rn is the 64-bit addressing mode
-- RnD is the 32-bit addressing mode, using the lowermost 32 bits (D for doubleword, 4 bytes = 32
+have different modes:
+- Rn is the 64-bit mode
+- RnD is the 32-bit mode, using the lowermost 32 bits (D for doubleword, 4 bytes = 32
   bits)
-- RnW is the 16-bit addressing mode, using the lowermost 16 bits (W for word, 2 bytes = 16 bits)
-- RnB is the 8-bit addressing mode, using the lowermost 8 bits
+- RnW is the 16-bit mode, using the lowermost 16 bits (W for word, 2 bytes = 16 bits)
+- RnB is the 8-bit mode, using the lowermost 8 bits
 
