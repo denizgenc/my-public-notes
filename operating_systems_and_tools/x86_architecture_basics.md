@@ -89,7 +89,7 @@ Note that these are _modes_ - RAX, EAX, AX, AH and AL are all on the same regist
 will modify EAX etc. (So there are 16 general-purpose registers on an x86-64 processor in total.)
 
 Finally, note that the name "General-purpose register" is somewhat of a misnomer.  SP (the stack
-pointer) and SB (the stack base) point to specific points in the stack, which is where important
+pointer) and SB (the stack base) point to specific addresses in the stack, which is where important
 data about the current process is stored. Using these registers for general calculations will mess
 things up big time.
 
