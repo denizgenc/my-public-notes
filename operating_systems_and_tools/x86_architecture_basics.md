@@ -85,3 +85,12 @@ have different modes:
 - RnW is the 16-bit mode, using the lowermost 16 bits (W for word, 2 bytes = 16 bits)
 - RnB is the 8-bit mode, using the lowermost 8 bits
 
+Note that these are _modes_ - RAX, EAX, AX, AH and AL are all on the same register, so modifying RAX
+will modify EAX etc. (So there are 16 general-purpose registers on an x86-64 processor in total.)
+
+Finally, note that the name "General-purpose register" is somewhat of a misnomer.  SP (the stack
+pointer) and SB (the stack base) point to specific points in the stack, which is where important
+data about the current process is stored. Using these registers for general calculations will mess
+things up big time.
+
+TODO: Create section about EFLAGS register
