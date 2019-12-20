@@ -5,7 +5,7 @@
 ## The Von Neumann Architecture
 The x86 architecture (and presumably most modern CPU/computer architectures?) is classified as a
 Von Neumann Architecture Machine (Wikipedia link:
-https://en.wikipedia.org/wiki/Von_Neumann_architecture). 
+https://en.wikipedia.org/wiki/Von_Neumann_architecture).
 
 ### Basic components and the system bus
 This architecture has three main components:
@@ -36,12 +36,21 @@ the feelings of LISP wizards).
 A register on a processor is a very small store of data that the processor can "directly" access. It
 is usually an order of magnitude faster than memory access.
 
+Almost all calculations on a x86 CPU involve a register - they are a "middleman in nearly every
+calculation".
+
 The x86 architecture has 4 different types of registers - general-purpose, special purpose
 application-accessible, segment, and special-purpose kernel-mode registers.
 
-Segment registers aren't used much in modern OSes, so these notes won't cover them. Also, the
-kernel-mode registers are for writing low-level tools, like operating systems or debuggers - these
-aren't in the scope of the book I'm sourcing these notes from so they won't be included.
+Segment registers traditionally contained values that represented addresses in memory that
+correspond to the stack, the code, and the data. They aren't used much in modern OSes, so these
+notes won't cover them. (The reason for this is that modern OSes use a memory model that sets nearly
+all segment registers to the same value, and uses paging to manage the different location of data in
+memory instead).
+
+Also, the kernel-mode registers are for writing low-level tools, like operating systems or
+debuggers - these aren't in the scope of the book I'm sourcing these notes from so they won't be
+included.
 
 ### General-purpose registers
 (Note: This section has been adapted from the book to be more relevant to the x86-64 architecture.
