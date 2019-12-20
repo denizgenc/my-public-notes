@@ -58,7 +58,7 @@ Sources used for this information includes the [x86 Assembly
 Wikibook](https://en.wikibooks.org/wiki/X86_Assembly/X86_Architecture) and the [AMD64 Architecture
 Programmer's Manual, Volume 3: General-Purpose and System
 Instructions](https://www.amd.com/system/files/TechDocs/24594.pdf), specifically the "Registers"
-section from page xxix onward.
+section from page xxix onward.)
 
 The x86 architecture provides 8 general-purpose registers (GPRs). These are:
 - AX (accumulator, used in arithmetic operations)
