@@ -32,3 +32,45 @@ This has the advantage that you can't treat instructions as data and data as ins
 The disadvantage is that you can't treat instructions as data and data as instructions (speed and
 the feelings of LISP wizards).
 
+## Registers
+A register on a processor is a very small store of data that the processor can "directly" access. It
+is usually an order of magnitude faster than memory access.
+
+The x86 architecture has 4 different types of registers - general-purpose, special purpose
+application-accessible, segment, and special-purpose kernel-mode registers.
+
+Segment registers aren't used much in modern OSes, so these notes won't cover them. Also, the
+kernel-mode registers are for writing low-level tools, like operating systems or debuggers - these
+aren't in the scope of the book I'm sourcing these notes from so they won't be included.
+
+### General-purpose registers
+(Note: This section has been adapted from the book to be more relevant to the x86-64 architecture.
+Sources used for this information includes the [x86 Assembly
+Wikibook](https://en.wikibooks.org/wiki/X86_Assembly/X86_Architecture) and the [AMD64 Architecture
+Programmer's Manual, Volume 3: General-Purpose and System
+Instructions](https://www.amd.com/system/files/TechDocs/24594.pdf), specifically the "Registers"
+section from page xxix onward.
+
+The x86 architecture provides 8 general-purpose registers (GPRs). These are:
+- AX (accumulator, used in arithmetic operations)
+- CX (counter, used in loops)
+- DX (data, used in arithmetic and I/O opersations)
+- BX (base, used as a pointer to data)
+- SP (stack pointer, points to the top of the stack)
+- BP (stack base pointer, pointes to the bottom of the stack)
+- SI (source index, used to point to source in stream operations)
+- DI (destination index, used to point to destination in stream operations)
+
+All of these registers can be addressed in 16-, 32-, and 64-bit modes.
+- Append E to the above register names to represent the register in 32-bit mode (EAX, ECX, EDX...)
+- Append R to the above register names for 64-bit (RAX, RCX, RDX, RSP, RBP...)
+- 8-bit addressing is also available for various registers, in different ways.
+
+Along with the above registers, x86-64 introduced 8 additional GPRs: R8, R9, R10 ... R15. These also
+have different addressing modes:
+- Rn is the 64-bit addressing mode
+- RnD is the 32-bit addressing mode, using the lowermost 32 bits (D for doubleword, 4 bytes = 32
+  bits)
+- RnW is the 16-bit addressing mode, using the lowermost 16 bits (W for word, 2 bytes = 16 bits)
+- RnB is the 8-bit addressing mode, using the lowermost 8 bits
+
