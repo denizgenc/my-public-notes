@@ -11,7 +11,7 @@ https://en.wikipedia.org/wiki/Von_Neumann_architecture).
 This architecture has three main components:
 - A CPU
 - Memory
-- Input/Output (I/O) devices
+- Input/Output (I/O) devices (e.g. storage, keyboard, display)
 
 These components are all connected together by the system bus. The system bus is compromised of:
 - The address bus
