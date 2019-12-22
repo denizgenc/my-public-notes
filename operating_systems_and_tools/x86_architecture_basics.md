@@ -93,4 +93,25 @@ pointer) and SB (the stack base) point to specific addresses in the stack, which
 data about the current process is stored. Using these registers for general calculations will mess
 things up big time.
 
-TODO: Create section about EFLAGS register
+### The FLAGS register
+In the processor there is a 16-bit register called the FLAGS register, that indicates the status of
+the processor. Most of the one bit flags are exclusively for use by the kernel, or of very little
+interest to an application programmer, but there are a few that are very important:
+- 0: the carry flag (set if the last arithmetic operation carried/borrowed (depending on addition or
+  subtraction) a bit beyond the size of the register
+- 6: the zero flag (set if the result of an operation is zero)
+- 7: the sign flag (set if the result of an operation is negative)
+- 11: the overflow flag (set if a signed arithmetic operation resulted in a value too large for the
+  register to contain - when two positive signed values result in a negative, or vice versa)
+
+These four flags can be called _condition codes_, and they allow the application to be aware of the
+result of previous computations (especially important for conditional parts of our code, i.e. the
+assembly equivalent of if, for and while statements).
+
+Also of interest are flags 10 (direction), 9 (interrupt disable), 4 (adjust/auxilliary carry) and 2
+(parity).
+
+(Note that the FLAGS register on x86-64 is actually 64 bits wide, with the name RFLAGS \[and on
+32-bit architectures it was EFLAGS\]. However, most of the flags beyond the first 16 are not of
+great interest \[to beginners?\] and in fact the flags from number 22 onwards are all reserved for
+future use, so should not be used.)
