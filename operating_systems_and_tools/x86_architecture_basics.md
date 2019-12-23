@@ -115,3 +115,13 @@ Also of interest are flags 10 (direction), 9 (interrupt disable), 4 (adjust/auxi
 32-bit architectures it was EFLAGS\]. However, most of the flags beyond the first 16 are not of
 great interest \[to beginners?\] and in fact the flags from number 22 onwards are all reserved for
 future use, so should not be used.)
+
+### Other registers
+There are other registers in 64 bit processors, with even larger sizes. These include:
+- SSE registers (128-bit)
+- AVX registers (256-bit)
+- AVX-512 registers (512-bit)
+
+These are all extensions to the x86 architecture, and are all related to floating point
+calculations. I won't cover them in great detail, because unfortunately my main source (Hyde)
+doesn't really cover them.
