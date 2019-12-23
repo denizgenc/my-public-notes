@@ -125,3 +125,15 @@ There are other registers in 64 bit processors, with even larger sizes. These in
 These are all extensions to the x86 architecture, and are all related to floating point
 calculations. I won't cover them in great detail, because unfortunately my main source (Hyde)
 doesn't really cover them.
+
+## Memory
+(I'm going to change tack and start talking about 32-bit x86, to stay closer to the main source -
+I'm not as confident in using other sources for this area)
+
+An x86 chip running on a 32-bit OS can access up to 2^32 memory locations (~4 billion locations),
+Note that this implies that the amount of addressable memory is connected to the size of the
+registers on the CPU.
+
+Since x86 supports byte-addressable memory, each memory location represents one byte of data.
+
+So how does this work with the data and adress buses we mentioned earlier?
