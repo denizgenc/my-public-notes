@@ -135,5 +135,25 @@ Note that this implies that the amount of addressable memory is connected to the
 registers on the CPU.
 
 Since x86 supports byte-addressable memory, each memory location represents one byte of data.
+Because of this, you can think of memory as a linear array of bytes; in (C-inspired) pseudocode you
+may "initialise" memory with the following:
 
-So how does this work with the data and adress buses we mentioned earlier?
+```
+byte Memory[4294967296];
+```
+
+So how does this work with the data and address buses we mentioned earlier?
+- To write a byte to an address in memory, say `Memory[125] = 0;`:
+  - The data bus has the value 0 written to it by the CPU
+  - The address bus has the value 125 written to it
+  - The CPU then asserts the "write line"
+- To read a byte from memory into the CPU (presumably into a register), e.g. `CPU = Memory[125];`
+  - The CPU then asserts the "read line"
+  - The address bus has the value 125 written to it
+  - The CPU then reads the resulting data off the data bus (= Memory[125])
+
+But this only applies to a single byte - how about accessing more than that, such as 2, 4 or 6
+bytes?
+
+Well, modern processors don't connect directly to the memory any more. Nowadays they have a cache
+(in fact several), which act as buffers between the CPU and memory.
