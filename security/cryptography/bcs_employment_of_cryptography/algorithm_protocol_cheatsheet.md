@@ -224,6 +224,39 @@ knowledge.
 - Shares no mathematical basis with previous SHAs
 - Decided by public competition
 
+## DSA
+- Digital Signature Algorithm (FIPS 186, published 1994)
+- Uses a variant of the ElGamal signature scheme
+  - Key size: 2048 or 3072 bits (as per NIST 800-57)
+- Use SHA-2 for hash
+
+## ECDSA
+- Elliptic Curve Digital Signature Algorithm
+- Instead of ElGamal, use elliptic curves to encrypt hash
+  - Key size: 160 bits or more
+- Use SHA-2 for hash
+
+## A5
+- Family of algorithms, starting with A5/1 (design leaked in 1994, reverse engineered 1999)
+  - A weakened version, A5/2, made for export regions
+- Used in mobile telecommunications
+- A5/1:
+  - Symmetric encryption algorithm
+    - Key size: 64 bits
+  - Stream cipher
+    - Acted somewhat like a block cipher (because GSM is transmitted in bursts)
+  - Known weaknesses exist
+  - Still used in GSM
+- A5/3 and A5/4:
+  - Uses a cipher called KASUMI
+  - Symmetric encryption algorithm
+    - Key size: 128 bits (A5/3 stretches a 64 bit key, A5/4 uses a full 128 bit key)
+  - Block cipher
+    - Block size: 128 bits
+  - Proprietary
+  - Has flaws but attacks are not simple
+  - Still used in 3G networks
+
 # List of applications and protocols
 - [PGP](#PGP)
 - [Blockchain](#Blockchain)
@@ -242,3 +275,11 @@ knowledge.
 - [BitLocker](#BitLocker)
 - [Trusted Platform Module](#Trusted-Platform-Module)
 - [TrueCrypt](#TrueCrypt)
+
+## Windows AD Authentication
+- Two systems for authentication: Kerberos (modern) and NTLM (legacy)
+  - Kerberos uses MD5 to hash passwords
+  - NTLM stores two hashes:
+    - NT hash uses MD4
+    - LM hash applies DES to the first 14 characters
+
