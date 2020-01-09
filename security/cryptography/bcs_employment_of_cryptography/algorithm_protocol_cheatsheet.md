@@ -4,6 +4,10 @@ As such, they don't go into all the detail one might expect (or may even be requ
 examination). For example, it won't describe how many steps/rounds a block cipher will go through,
 etc. I hope it is still useful regardless.
 
+[Click here to jump to the list of cryptographic algorithms](#List-of-cryptographic-algorithms)
+
+[Click here to jump to the list of applications and protocols](#List-of-applications-and-protocols)
+
 # Definitions and concepts
 
 ## Types of cryptographic algorithms
@@ -88,6 +92,7 @@ knowledge.
 - [SHA-3](#SHA-3)
 - [DSA](#DSA)
 - [ECDSA](#ECDSA)
+- [A5](#A5)
 
 ## DES
 - Data Encryption Standard (FIPS 46, published 1977; withdrawn 2005)
@@ -215,3 +220,22 @@ knowledge.
   - Hash length: 224, 256, 384, 512, arbitrary
 - Shares no mathematical basis with previous SHAs
 - Decided by public competition
+
+# List of applications and protocols
+- [PGP](#PGP)
+- [Blockchain](#Blockchain)
+- [Windows AD Authentication](#Windows-AD-Authentication)
+- [TLS](#TLS)
+- [IPsec](#IPsec)
+- [WEP](#WEP)
+- [WPA](#WPA)
+- [WPA2](#WPA2)
+- [Aircrack](#Aircrack)
+- [Bluetooth](#Bluetooth)
+- [TOR](#TOR)
+- [PIN](#PIN)
+- [Mobile Telecommunication](#Mobile-Telecommunication)
+- [EFS](#EFS)
+- [BitLocker](#BitLocker)
+- [Trusted Platform Module](#Trusted-Platform-Module)
+- [TrueCrypt](#TrueCrypt)
