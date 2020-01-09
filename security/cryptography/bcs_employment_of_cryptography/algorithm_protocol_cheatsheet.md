@@ -64,3 +64,24 @@ knowledge.
     generated stream is compromised
 - CSPRNGs are used for generating keys
   - So the "initial state" for these functions are regarded as key material
+
+# List of cryptographic algorithms
+- [DES](#DES)
+- [3DES](#3DES)
+- [IDEA](#IDEA)
+- [AES](#AES)
+- [RC4](#RC4)
+- [Salsa20](#Salsa20)
+- [ChaCha20](#ChaCha20)
+- [RSA](#RSA)
+- [Diffie-Hellman](#Diffie-Hellman)
+- [ECC](#ECC)
+- [ECDH](#ECDH)
+- [PGP](#PGP)
+- [MD5](#MD5)
+- [SHA-1](#SHA-1)
+- [SHA-2](#SHA-2)
+- [SHA-3](#SHA-3)
+- [DSA](#DSA)
+- [ECDSA](#ECDSA)
+
