@@ -36,14 +36,19 @@ examination). I hope it is still useful regardless.
 - Acts on fixed size blocks of plaintext (e.g. 128 bits - data must be padded if it does not match
   up) to output fixed size blocks of ciphertext
 - Has different modes
-  - ECB (Electronic Code Book) - only a key used on a block. Same plaintext block = same ciphertext
-    block. This is flawed.
-  - CBC (Cipher Block Chaining) - IV used on initial plaintext block, then each following plaintext
-    block XORed with previous ciphertext block.
-  - CTR (Counter) - Nonce and counter block enciphered, then XORed with plaintext block. Counter is
-    increased by one, then move on to next plaintext block. Faster than CBC.
-  - GCM (Galois Counter Mode) - Basically CTR mode, with added authentication. Means that you don't
-    have to attach a separate MAC, which speeds things up.
+  - ECB (Electronic Code Book)
+    - only a key used on a block. Same plaintext block = same ciphertext block. This is flawed.
+  - CBC (Cipher Block Chaining)
+    - IV used on initial plaintext block, then each following plaintext block XORed with previous
+      ciphertext block.
+    - Fixes above flaw with ECB
+  - CTR (Counter)
+    - Nonce and counter block enciphered, then XORed with plaintext block. Counter is increased by
+      one, then move on to next plaintext block.
+    - Faster than CBC.
+  - GCM (Galois Counter Mode)
+    - Basically CTR mode, with added authentication. Means that you don't have to attach a separate
+      MAC, which speeds things up.
 
 ## Kerckhoff's Principle
 A cryptosystem should be secure even if everything about the system, except the key, is public
