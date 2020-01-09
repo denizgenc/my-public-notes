@@ -73,6 +73,9 @@ knowledge.
     generated stream is compromised
 - CSPRNGs are used for generating keys
   - So the "initial state" for these functions are regarded as key material
+    - Initial state must have enough entropy to generate a number that is sufficiently random
+    - If not enough entropy from sources on the operating system (e.g. Linux's `/dev/random`), get
+      user to shake mouse/mash keyboard
 
 # List of cryptographic algorithms
 - [DES](#DES)
