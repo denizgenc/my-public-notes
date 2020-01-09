@@ -1,7 +1,8 @@
 Please note that the following are designed more for revision.
 
 As such, they don't go into all the detail one might expect (or may even be required for the BCS
-examination). I hope it is still useful regardless.
+examination). For example, it won't describe how many steps/rounds a block cipher will go through,
+etc. I hope it is still useful regardless.
 
 # Definitions and concepts
 
@@ -29,10 +30,14 @@ examination). I hope it is still useful regardless.
 - Can also be used to generate "random" numbers deterministically, etc
 
 ### Stream ciphers
+- A type of symmetric cipher
 - Acts on continuous streams of data
-- Changes each byte (or bit) to some other byte (or bit)
+- Changes each bit to another bit
+- Uses the key provided to generate an "infinite" stream of digits to encrypt with - this is called
+  the "keystream"
 
 ### Block ciphers
+- A type of symmetric cipher
 - Acts on fixed size blocks of plaintext (e.g. 128 bits - data must be padded if it does not match
   up) to output fixed size blocks of ciphertext
 - Has different modes
