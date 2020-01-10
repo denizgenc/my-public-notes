@@ -276,6 +276,20 @@ knowledge.
 - [Trusted Platform Module](#Trusted-Platform-Module)
 - [TrueCrypt](#TrueCrypt)
 
+## PGP
+- Pretty Good Privacy (Phil Zimmerman, 1991)
+- Suite for authenticating and encrypting data
+- Utilises variety of algorithms, including asymmetric ones
+  - Need to import and publish public keys (see MIT PGP keyserver)
+- Peforms encryption, decryption and hashing
+- Standardised as OpenPGP in RFC 4880
+  - Free implementation in GNU Privacy Guard (GPG)
+
+## Blockchain
+- First described by "Satoshi Nakamoto", 2008, implemented in Bitcoin in 2009
+- Combines peer-to-peer file sharing with hashing technology
+- Bitcoin requires miners to find a specific SHA-256 hash
+
 ## Windows AD Authentication
 - Two systems for authentication: Kerberos (modern) and NTLM (legacy)
   - Kerberos uses MD5 to hash passwords
