@@ -287,8 +287,11 @@ knowledge.
 - Wired Equivalent Privacy (802.11 standard 1997, deprecated 2004)
 - Uses RC4 stream cipher
   - Key size: 64 bit (40 bit key + 24 bit IV) or 128 bit (extended WEP: 104 bit key + 24 bit IV)
-- Either no authentication (WEP still used for encrypting data) or PSK authenticaton
-  - WEP PSK then used encrypting data
+- Two authentication modes:
+  - Open System Authentication - no auth. Client must have correct keys to encrypt/decrypt WEP
+    frames
+  - Shared Key authentication - authenticate using this key. Key then used for encrypting WEP frames
+    using RC4.
 - Main flaw is that IV is too short (24 bits), so will be repeated
   - Enables the RC4 key to be recovered in minutes
 - Replaced by WPA and WPA2
