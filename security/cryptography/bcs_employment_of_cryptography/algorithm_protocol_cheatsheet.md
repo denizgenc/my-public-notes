@@ -283,3 +283,36 @@ knowledge.
     - NT hash uses MD4
     - LM hash applies DES to the first 14 characters
 
+# WEP
+- Wired Equivalent Privacy (802.11 standard 1997, deprecated 2004)
+- Uses RC4 stream cipher
+  - Key size: 64 bit (40 bit key + 24 bit IV) or 128 bit (extended WEP: 104 bit key + 24 bit IV)
+- Either no authentication (WEP still used for encrypting data) or PSK authenticaton
+  - WEP PSK then used encrypting data
+- Main flaw is that IV is too short (24 bits), so will be repeated
+  - Enables the RC4 key to be recovered in minutes
+- Replaced by WPA and WPA2
+
+# WPA
+- Wi-Fi Protected Access (published 2002, deprecated 2012)
+- Intermediate solution for WPA2 incompatible devices
+- Used Temporal Key Integrity Protocol (TKIP
+  - Key size: 64 bit or 128 bit
+  - Basically like RC4 in WEP, but "mixes" key and IV instead of just concatenating them, and
+    implements a counter and Message Integrity Check (i.e. a MAC)
+- Stronger than WEP but still has flaws
+- Replaced by WPA2
+
+# WPA2
+- Wi-Fi Protected Access 2
+- The name of the implementation of the IEEE 802.11i-2004 standard
+- Uses AES block cipher
+  - Key size: 128 bit (+ 48 bit IVs = 176 bits total)
+  - Mode used: Counter Mode Cipher Block Chaining Message Authentication Code Protocol
+    - CCMP for short
+    - Basically Counter mode + generating MACs using CBC mode. Think of it like GCM.
+- Different authentication modes:
+  - WPA2-PSK - pre-shared key
+  - WPA2-Enterprise - uses EAP (authenticate using LDAP etc)
+- Not vulnerable to key recovery attacks like WEP
+  - WPA2-PSK vulnerable to dictionary attack, if short/low-entropy PSK used
