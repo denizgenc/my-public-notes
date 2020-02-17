@@ -152,8 +152,19 @@ So how does this work with the data and address buses we mentioned earlier?
   - The CPU then asserts the "read line"
   - The CPU then reads the resulting data off the data bus (= Memory[125])
 
-But this only applies to a single byte - how about accessing more than that, such as 2, 4 or 6
-bytes?
+This only applies to a single byte. To access more than one byte at a time, an x86 processor still
+uses a single address, but uses the knowledge of the size of the data (2, 4 or 8 bytes) to read
+consecutive memory locations.
+- As an FYI, to speed up access times, data should be placed on addresses that are multiples of the
+  data length, i.e.
+  - 2 bytes of data should be placed on even addresses,
+  - 4 bytes of data should be placed on multiples of 4,
 
-Well, modern processors don't connect directly to the memory any more. Nowadays they have a cache
-(in fact several), which act as buffers between the CPU and memory.
+  etc. This is called [_data structure
+  alignment_](https://en.wikipedia.org/wiki/Data_structure_alignment).
+
+  However, the processor cache(s) (see below) deal with this automatically now.
+
+Also note that modern processors don't connect directly to the memory any more. Nowadays they have a
+cache (in fact several), which act as high-speed buffers between the CPU and memory.
+
