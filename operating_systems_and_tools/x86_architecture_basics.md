@@ -148,8 +148,8 @@ So how does this work with the data and address buses we mentioned earlier?
   - The address bus has the value 125 written to it
   - The CPU then asserts the "write line"
 - To read a byte from memory into the CPU (presumably into a register), e.g. `CPU = Memory[125];`
-  - The CPU then asserts the "read line"
   - The address bus has the value 125 written to it
+  - The CPU then asserts the "read line"
   - The CPU then reads the resulting data off the data bus (= Memory[125])
 
 But this only applies to a single byte - how about accessing more than that, such as 2, 4 or 6
