@@ -45,7 +45,7 @@ application-accessible, segment, and special-purpose kernel-mode registers.
 Segment registers traditionally contained values that represented addresses in memory that
 correspond to the stack, the code, and the data. They aren't used much in modern OSes, so these
 notes won't cover them. (The reason for this is that modern OSes use a memory model that sets nearly
-all segment registers to the same value, and uses paging to manage the different location of data in
+all segment registers to the same value, and uses paging to manage the different locations of data in
 memory instead).
 
 Also, the kernel-mode registers are for writing low-level tools, like operating systems or
@@ -53,8 +53,8 @@ debuggers - these aren't in the scope of the book I'm sourcing these notes from 
 included.
 
 ### General-purpose registers
-(Note: This section has been adapted from the book to be more relevant to the x86-64 architecture.
-Sources used for this information includes the [x86 Assembly
+(Note: This section has been adapted from the other sources to be more relevant to the x86-64
+architecture.  Sources used for this information includes the [x86 Assembly
 Wikibook](https://en.wikibooks.org/wiki/X86_Assembly/X86_Architecture) and the [AMD64 Architecture
 Programmer's Manual, Volume 3: General-Purpose and System
 Instructions](https://www.amd.com/system/files/TechDocs/24594.pdf), specifically the "Registers"
@@ -116,7 +116,7 @@ Also of interest are flags 10 (direction), 9 (interrupt disable), 4 (adjust/auxi
 great interest \[to beginners?\] and in fact the flags from number 22 onwards are all reserved for
 future use, so should not be used.)
 
-### Other registers
+### Other registers
 There are other registers in 64 bit processors, with even larger sizes. These include:
 - SSE registers (128-bit)
 - AVX registers (256-bit)
