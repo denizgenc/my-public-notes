@@ -24,7 +24,7 @@ for i in nums:
 ```
 
 The result looked good enough. Now I needed a primality test - I just nicked this one off the
-Wikipedia article for it: https://en.wikipedia.org/wiki/Primality\_test#Pseudocode
+Wikipedia article for it: https://en.wikipedia.org/wiki/Primality_test#Pseudocode
 
 ```python
 def is_prime(n):
