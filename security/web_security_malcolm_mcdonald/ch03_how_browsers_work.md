@@ -1,7 +1,7 @@
 # Chapter 3 - How browsers work
 This chapter covers:
 - Web page rendering
-- The browser security model
+- JavaScript and the browser security model
 - Attacks on the browser
 
 ## Web Page Rendering
