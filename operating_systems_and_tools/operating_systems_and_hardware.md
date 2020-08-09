@@ -45,8 +45,8 @@ is stored in memory.
   time shares ("context switches") between processes
 - Only parts of the page tables are switched out though - parts of the page table remain (for
   example, the parts that map to where operating system calls stay where they are).
-- The thing that does all this is the MMU. Nowadays this is integrated into the CPU, but it
-  wasn't always.
+- The thing that does all this is the Memory Management Unit (MMU). Nowadays this is integrated into
+  the CPU, but it wasn't always.
 
 How do you get data from disk?
 -----------------------------
@@ -68,7 +68,7 @@ load that part into physical memory, and then map that to virtual memory.
 
 Misc.
 ------------------
-When the OS starts, the it sets up the processor so that it understands that "syscall xxx" refers to
+When the OS starts, it sets up the processor so that it understands that "syscall xxx" refers to
 a specific part of memory.
 
 Unix is great because all the devices (under `/dev/`) are files! So you don't have to write a
