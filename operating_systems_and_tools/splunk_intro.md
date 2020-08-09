@@ -1,5 +1,4 @@
 # Splunk 4 Rookies
-----------
 Delivered at Softcat, 2019-09-11 
 
 Objective - take log data/machine data and add value to it through visualisations etc
@@ -54,7 +53,7 @@ Splunk determines interesting fields in the searches by determining which fields
 least 20% of events
 
 Splunk's Search Processing Language Structure:  
-[command] [function] search terms [ | ]
+`[command] [function] search terms [ | ]`
   - Pipes work like Unix pipes
   - After the first pipe, doing any extra searches (to further "filter" the results) requires an
     explicit `search` command (the first part of every search has an implict `search` at the
@@ -82,11 +81,11 @@ Enriching data with the lookup command:
   - If you don't know what those fields are... tough luck! See if you can find the lookup file
     to see what the field names are
 
-Obtaining location info with the iplocation and geostats commands:  
+Obtaining location info with the `iplocation` and `geostats` commands:  
 `<your search> | iplocation ip\field | geostats count by [City|Region|Country]`
-  - iplocation adds muliple fields - City, Region, Country, longitude, latitude (more?) to the
+  - `iplocation` adds muliple fields - City, Region, Country, longitude, latitude (more?) to the
     results
-  - geostats uses the longitude and latitude information to plot data on a map
+  - `geostats` uses the longitude and latitude information to plot data on a map
 
 Resources:
 - splunkbase.splunk.com - apps for Splunk
