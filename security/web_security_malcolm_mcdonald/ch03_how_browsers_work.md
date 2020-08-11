@@ -48,8 +48,8 @@ that should be applied to that tag.
 JavaScript is found within `<script>` tags - either defined inline, or (more usually) referenced as
 an external resource and fetched on page load.
 
-The default behaviour is to immediately execute JavaScript in when the corresponding `<script>` tag
-is parsed into a DOM node. This is a problem if the rest of the HTML document hasn't been parsed
-into the tree, as the JavaScript may attempt to interact with elements in the tree that are not
-there yet. To fix this, `<script>` tags usually have a `defer` attribute, which means the JavaScript
-is only executed once the DOM has been constructed.
+The default behaviour is to immediately execute JavaScript when the corresponding `<script>` tag is
+parsed into a DOM node. This is a problem if the rest of the HTML document hasn't been parsed into
+the tree, as the JavaScript may attempt to interact with elements in the tree that are not there
+yet. To fix this, `<script>` tags usually have a `defer` attribute, which means the JavaScript is
+only executed once all the HTML is parsed into the DOM.
