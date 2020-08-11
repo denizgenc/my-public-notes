@@ -10,4 +10,4 @@ Published by No Starch Press, 2020. Available at: https://nostarch.com/websecuri
   stack, the make up of HTTP requests and responses, how to make an HTTP connection stateful, and
   TLS/HTTPS.
 - [Chapter 3 - How browsers work](ch03_how_browsers_work.md) - Web page rendering, the DOM, CSS,
-  JavaScript, and the browser security model (INCOMPLETE)
+  JavaScript, and the browser security model

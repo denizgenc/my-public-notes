@@ -53,3 +53,37 @@ parsed into a DOM node. This is a problem if the rest of the HTML document hasn'
 the tree, as the JavaScript may attempt to interact with elements in the tree that are not there
 yet. To fix this, `<script>` tags usually have a `defer` attribute, which means the JavaScript is
 only executed once all the HTML is parsed into the DOM.
+
+JavaScript is an enticing target for attackers as it opens up the possibility of remote code
+execution in lots of different ways. To reduce the avenues in which an attacker can use JavaScript,
+we have the **browser security model**.
+
+The security model executes JavaScript in a sandbox, where it cannot do the following:
+- Start new processes
+- Access other processes
+- Access arbitrary portions of the system memory (can only access memory from within its own
+  sandbox)
+- Read and write from the disk. Sites can store data locally, but there's no interface to the actual
+  filesystem.
+- Access the OS's network layer
+- Call OS functions
+
+So what *can* JavaScript do?
+- Read/write to the DOM
+- Create ("register") event listeners to respond to user actions on the page
+- Make HTTP requests
+- Open new web pages or refresh the URL, but only on a user action
+- Write to the browser history, and go backwards and forwards in the history
+- Ask for the user's location, for permission to send desktop notifications, for mic access etc.
+
+These restrictions don't stop cross-site scripting (XSS) attacks, which can read credit card
+details, credentials, etc.  Even a tiny amount of code can be dangerous - because JavaScript can
+write to the DOM, a one liner can pull in more and more `<script>` tags. Protecting a site against
+cross-site scripting is covered in chapter 7.
+
+## Everything else the browser does
+Browsers aren't just rendering pipelines and JavaScript interpreters:
+- Communicate with the OS to resolve and cache DNS queries
+- Verify security certificates
+- Perform TLS handshakes and encrypt HTTP
+- Store and transmit cookies
