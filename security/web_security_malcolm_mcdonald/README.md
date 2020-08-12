@@ -11,3 +11,6 @@ Published by No Starch Press, 2020. Available at: https://nostarch.com/websecuri
   TLS/HTTPS.
 - [Chapter 3 - How browsers work](ch03_how_browsers_work.md) - Web page rendering, the DOM, CSS,
   JavaScript, and the browser security model
+- [Chapter 4 - How web servers work](ch04_how_web_servers_work.md) - Static and dynamic resources,
+  URL resolution, CDNs, CMSes, templates, databases (SQL vs NoSQL), distributed caches, various
+  programming languages (INCOMPLETE)
