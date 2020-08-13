@@ -87,3 +87,93 @@ entries in the table. Columns have predefined data types - strings, numbers, dat
 Different tables in the same database refer to each other using keys. A table has a primary key
 (usually a unique number) that identifies rows in the table, and there may be a foreign key column
 in that table that represents primary keys (and hence other rows) from other tables.
+
+There are data integrity constraints on relational databases, that prevent corruption of the data.
+Constraints can be defined for a table - e.g. a `username` column being required to have unique
+values, so no two users can have the same username.
+
+SQL also has the concept of transactions and consistent behaviour. A transaction is a grouping of
+SQL statements to be executed; if any one of those statements fails, the whole transaction fails,
+and the database is left unchanged. SQL databases are consistent in that the whole database must
+abide by its constraints - a transaction will never leave it in a state where it has invalid data.
+
+Data in SQL databases tends to be rather sensitive, so is the target of hackers. Also, SQL injection
+can cause issues, and is covered in chapter 6.
+
+#### NoSQL Databases
+SQL databases have some difficulties with performance, especially when multiple different queries
+are being made. Because of these issues, NoSQL has become more popular. NoSQL databases don't have
+the strict constraints of relational databases to be faster. There's lots of different types of
+NoSQL databases, but there's some commonalities as well.
+
+NoSQL databases tend not to have schemas, so every record can have different columns (data fields).
+Schemaless data is often in key-value form, or in JSON format. This makes storing unstructured or
+semi-structured data pretty easy.
+
+NoSQL databases don't prioritise consistency as much. With SQL, a guarantee is that different
+clients, making the same query at the same time, will see the same result. Most NoSQL databases will
+instead aim for *eventual* consistency.
+
+However, querying NoSQL databases can be harder than SQL ones - some may have an API for a
+programming language, while others may use SQL-like syntax. Therefore it's more difficult for
+hackers to mount an injection attack on a NoSQL database, but it's still possible.
+
+### Distributed Caches
+Distributed caches have data stored in memory, which makes retrieving data from them incredibly
+quick. Examples like Redis and Memcached allow different software (and even different servers) to
+store and share data (including data structures, which can be accessed in a language-agnostic way).
+
+When a system is implemented in terms of microservices, the microservices communicate using
+distributed caches. They can either use queues which are stored on the cache, or using
+publish-subscribe channels.
+
+The same sort of attacks on databases can also be performed on distributed caches. Redis and
+Memcached provide SDKs that enforce best practices, so these can be avoided.
+
+### Web Programming Languages
+So many languages, so little time.
+
+#### Ruby (on Rails)
+- Invented in the mid-90s
+- Became popular in the mid-00s with Ruby on Rails
+  - Rails represents best practices for large web apps
+  - Takes security seriously
+- Smaller Ruby servers use microframeworks like Sinatra.
+  - Extend capabilities of microframeworks using Ruby Gems package manager
+
+#### Python
+- Whitespace
+- Popular with data science and scientific computing
+- Variety of web frameworks/servers: Django, Flask, etc.
+
+#### JavaScript and Node.js
+- Node.js runtime is based on Google's V8 JS engine (from Chrome browser)
+- Quite nice to be able to use same language on client and server
+- Biggest security risks with Node is due to rapid growth - lots of package, not enough auditing.
+
+#### PHP
+- Developed from C binaries to build dynamic sites on Linux
+- Then grew into a fully-fledged programming language
+  - Haphazard growth = haphazard language
+- PHP usually found in legacy systems.
+  - Modern libraries and frameworks are secure, but legacy systems tend not to use those... Make
+    sure to update.
+
+#### Java
+- A programming language which runs in its own virtual machine - the Java Virtual Machine (JVM)
+- Decent language where performance is a concern
+- Not as popular for web dev as it used to be, but still powers a decent amount of its internet
+- Legacy applications run on older, insecure versions of Java and the JVM. Make sure to update.
+- Other languages use the JVM (therefore can use Java libraries):
+  - Clojure (Lisp dialect)
+  - Scala
+  - Kotlin
+
+#### C#
+- A programming language which runs in its own virtual machine - the Common Language Runtime (CLR).
+- Supports C++ code as well
+- Reference implementation of C# is now open source
+- Mono is an implementation of the CLR that allows .NET applications (such as C# apps) to run on
+  Linux and other OSes.
+  - However most companies that use C# will be deploying to Microsoft infra - Windows servers etc
+    - This can be a cause for concern, security wise
