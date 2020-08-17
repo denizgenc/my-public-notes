@@ -13,4 +13,4 @@ Published by No Starch Press, 2020. Available at: https://nostarch.com/websecuri
   JavaScript, and the browser security model
 - [Chapter 4 - How web servers work](ch04_how_web_servers_work.md) - Static and dynamic resources,
   URL resolution, CDNs, CMSes, templates, databases (SQL vs NoSQL), distributed caches, various
-  programming languages (INCOMPLETE)
+  programming languages, JavaScript frameworks

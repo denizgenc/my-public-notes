@@ -7,6 +7,7 @@ This chapter covers:
   - Templates
   - Databases
   - Programming languages
+  - JavaScript frameworks
 
 ## Static and Dynamic Resources
 Websites used to be made of handwritten HTML served direct from the filesystem. URLs would
@@ -130,7 +131,7 @@ publish-subscribe channels.
 The same sort of attacks on databases can also be performed on distributed caches. Redis and
 Memcached provide SDKs that enforce best practices, so these can be avoided.
 
-### Web Programming Languages
+### Web Programming Languages
 So many languages, so little time.
 
 #### Ruby (on Rails)
@@ -149,7 +150,7 @@ So many languages, so little time.
 #### JavaScript and Node.js
 - Node.js runtime is based on Google's V8 JS engine (from Chrome browser)
 - Quite nice to be able to use same language on client and server
-- Biggest security risks with Node is due to rapid growth - lots of package, not enough auditing.
+- Biggest security risks with Node is due to rapid growth - lots of packages, not enough auditing.
 
 #### PHP
 - Developed from C binaries to build dynamic sites on Linux
@@ -177,3 +178,35 @@ So many languages, so little time.
   Linux and other OSes.
   - However most companies that use C# will be deploying to Microsoft infra - Windows servers etc
     - This can be a cause for concern, security wise
+
+#### Client-Side JavaScript
+Despite all these choices available to developers on the server side of the web, there's only one
+option when it comes to running code in the browser - JavaScript (though there's also languages
+like TypeScript that are transpiled to JS).
+
+JavaScript allows websites to be really dynamic now (redrawing whole sections of the page when the
+user interacts with it, e.g. opening modal windows in Twitter; or notifying users when background
+events happen). To do this without refreshing the page requires managing a lot of state in memory,
+which is really complicated - so frameworks have been created to make this simpler.
+
+One example of a JavaScript framework is Angular, by Google:
+- Similar to server-side templating engines - Angular is a bunch of JavaScript that parses and
+  renders templates *client-side (in the browser)*
+  - Template HTML is provided by the server
+  - Angular engine parses it and processes directives (for loops, etc)
+  - Since this is JavaScript, it can directly update the DOM to update the page (this
+    "short-circuits" some parts of the rendering pipeline).
+
+Another example is React, by Facebook:
+- Instead of writing templates, write HTML tags directly into JavaScript:
+  ```jsx
+  somefunc(someargs) {
+    ...
+    return <h1>Hello, {format(user)}</h1>
+  }
+  ```
+- These are JavaScript XML files, usually with an extension `.jsx`, that are compiled into
+  JavaScript before being served to a client
+
+These frameworks enable complex, dynamic sites to be created, but because they directly manipulate
+the DOM they open up a unique attack vector: DOM-based XSS. These are explored in chapter 7.
