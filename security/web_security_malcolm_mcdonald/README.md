@@ -14,3 +14,6 @@ Published by No Starch Press, 2020. Available at: https://nostarch.com/websecuri
 - [Chapter 4 - How web servers work](ch04_how_web_servers_work.md) - Static and dynamic resources,
   URL resolution, CDNs, CMSes, templates, databases (SQL vs NoSQL), distributed caches, various
   programming languages, JavaScript frameworks
+- [Chapter 5 - How programmers work](ch05_how_programmers_work.md) - The Software Development
+  Lifecycle (SDLC): design and analysis, coding, testing, release, post-release testing; managing
+  dependencies (INCOMPLETE)
