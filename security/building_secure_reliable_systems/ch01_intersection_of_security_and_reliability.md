@@ -58,3 +58,45 @@ There are compromises you may have to make between reliability and security:
     if an attacker gets hold of them.
 
 ## The CIA triad
+Both reliability and security are concerned with the CIA triad and how it applies to a system, but
+for different reasons. Again, the presence (or lack of) an adversary is the main difference. For
+example, a reliable system must not breach confidentiality by delivering a message to the wrong
+person, failing to encrypt a file, etc.
+
+The following are examples of how _reliability problems_ can cause _security issues_:
+- Confidentiality
+  - Microphones stuck in the transmit position (a problem that has occurred a fair amount in
+    aviation).
+- Integrity
+  - a 2015 incident in Google found that machines with memory issues were corrupting data, flipping
+    single bits. This was detected using cryptographic integrity checks.
+- Availability
+  - DoS attacks are difficult because they can be hard to distinguish from legitimate spikes in
+    traffic, or a design flaw in the system.
+
+## Similarities between reliability and security
+### Invisibility
+When a system is reliable or secure, it is "invisible" - does not factor into the day-to-day
+operation of the system.
+
+Because of this, people can come to the conclusion that reliablity or security efforts are a waste
+of money. To prevent this, consistent communication about the reliability/security of systems with
+stakeholders is important - even if there is no incident.
+
+### Assessment
+You can use assessments to figure out the costs of certain risks, to reason about whether mitigation
+is worth the cost (considering your error budget). Howeever, the probability of a certain threat may
+be different when considering reliability (no threat actor) compared to security.
+
+There's also adversarial testing (e.g. pentesting) to understand how a would respond to an attack
+from a certain threat actor.
+
+### Simplicity
+Systems must be as simple as possible. This helps when reasoning about how reliable and secure a
+system is.
+
+Simplicity also helps reduce the attack surface, and makes responding to incidents easier.
+
+### Evolution
+
+### Resilience
