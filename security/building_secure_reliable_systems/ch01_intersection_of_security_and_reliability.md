@@ -79,13 +79,13 @@ The following are examples of how _reliability problems_ can cause _security iss
 When a system is reliable or secure, it is "invisible" - does not factor into the day-to-day
 operation of the system.
 
-Because of this, people can come to the conclusion that reliablity or security efforts are a waste
+Because of this, people can come to the conclusion that reliability or security efforts are a waste
 of money. To prevent this, consistent communication about the reliability/security of systems with
 stakeholders is important - even if there is no incident.
 
 ### Assessment
 You can use assessments to figure out the costs of certain risks, to reason about whether mitigation
-is worth the cost (considering your error budget). Howeever, the probability of a certain threat may
+is worth the cost (considering your error budget). However, the probability of a certain threat may
 be different when considering reliability (no threat actor) compared to security.
 
 There's also adversarial testing (e.g. pentesting) to understand how a would respond to an attack
