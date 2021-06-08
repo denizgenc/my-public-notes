@@ -82,3 +82,50 @@ mutate - we can't store every single variation of a string in finite space...
 
 In order to have data that can change and grow, we need to allocate `String` types on the heap. That
 means we need a way of returning the allocated memory to the allocator once we're finished using it.
+In other languages that might be accomplished using GC or manual memory management.
+
+Rust uses ownership to figure out when data isn't being used, and automatically frees it if so.
+Looking back at the previous example:
+```rust
+{                      // s is not valid here, it’s not yet declared
+    let s = "hello";   // s is valid from this point forward
+
+    // do stuff with s
+}                      // this scope is now over, and s is no longer valid
+```
+
+It makes sense to deallocate `s` when it goes out of scope. When a variable goes out of scope, the
+function `drop` is called automatically by Rust (as defined by `String`'s implementation).
+
+Deallocating memory once it stops being used ("at the end of its lifetime") is called **Resource
+Acquisition Is Initialisation**, or RAII. It's a common (?) pattern in C++.
+
+# Ways Variables and Data Interact: Move
+This works:
+```rust
+let x = 5;
+let y = x;
+
+println!("x = {}, y = {}", x, y);
+```
+
+This is because integers are a fixed size, are pushed onto the stack, and are therefore cheap to
+copy.
+
+This doesn't work:
+```rust
+let s1 = String::from("hello");
+let s2 = s1;
+
+println!("s1 = {}, s2 = {}", s1, s2);
+```
+
+To understand this, we have to understand how `String` variables are laid out. There are two parts
+to a `String`: a struct of fixed size data (the length of the string, the capacity of the string,
+and a pointer to the bytes that make up the string) which are stored on the stack, and the
+characters that make up the string themselves, which is stored on the heap. When we do the pattern
+above, there are two different ways we can go about implementing it:
+- `s2` points to the same data as `s1`.
+  - This is a problem because of double free (expand)
+- `s1`'s data is copied and stored in a different location, which `s2` will point to.
+  - This is expensive because the data is on the heap, which is slow.
