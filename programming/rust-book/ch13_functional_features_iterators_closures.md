@@ -36,7 +36,7 @@ The reason we can do this is because closures aren't exposed to other parts of t
 other developers (if it's a library) - they're used within functions themselves, so you're not
 making a strict contract that you have to fulfil, kind of.
 
-## Storing Closures Using Generic Parameters and the `Fn` Traits
+### Storing Closures Using Generic Parameters and the `Fn` Traits
 Imagine we have the following function, that conditionally needs to call an expensive calculation
 function:
 
@@ -122,7 +122,7 @@ will give us the same result. The Rust Book admits this... To be fair, it *does*
 example we're looking into, where we have a function that only ever uses the same parameter for the
 function.
 
-## Capturing the Environment with Closures
+### Capturing the Environment with Closures
 Closures can do something functions cannot: **they can captures their environment and access
 variables from the scope in which they're defined**. See:
 ```rust
@@ -147,3 +147,78 @@ ways:
 
 Rust infers which trait to use based on how you use the closure in the code. Note that all closures
 implement `FnOnce`, since they can all be called at least once.
+
+## Processing a Series of Items with Iterators
+Rust's iterators are lazy, which means they don't do anything until you start using them (either by
+calling additional methods on the iterator or by using them in a `for` loop).
+
+### The `Iterator` Trait and the `next` Method
+The `Iterator` trait is defined as so:
+```rust
+pub trait Iterator {
+    type Item;
+
+    fn next(&mut self) -> Option<Self::Item>;
+}
+```
+
+This tells us that in order to implement an `Iterator` trait, you must also define an `Item` type,
+which is used in the return type of the `next` method, which you also need to implement. The `next`
+method defines when the iterator is exhausted by returning `None`.
+
+We can call `next` on iterators directly:
+```rust
+fn iterator_demonstration() {
+    let v1 = vec![1, 2, 3];
+
+    let mut v1_iter = v1.iter();
+
+    assert_eq!(v1_iter.next(), Some(&1));
+    assert_eq!(v1_iter.next(), Some(&2));
+    assert_eq!(v1_iter.next(), Some(&3));
+    assert_eq!(v1_iter.next(), None);
+}
+```
+
+The iterator, `v1_iter`, must be mutable, since `next` changes the state of the iterator. We don't
+need to make iterators mutable in a `for` loop, since `for` loops takes ownership of the iterator
+(and makes them mutable behind the scenes).
+
+In this example, `next` returns immutable references to items in the original `v1` vector. If we
+wanted the values directly (i.e. to take ownership of the values), we could have used `into_iter`
+instead to create the iterator. If we wanted mutable references, we could have used `iter_mut`.
+
+### Consuming Adaptors: Iterator Methods that Consume the Iterator
+`Iterator` has various methods with default implementations defined by the standard library. Some of
+these methods call the `next` method, which means that they exhaust/consume the iterator. These
+methods are known as consuming adaptors. An example is the `sum` method.
+```rust
+fn iterator_sum() {
+    let v1 = vec![1, 2, 3];
+
+    let v1_iter = v1.iter();
+
+    let total: i32 = v1_iter.sum();
+
+    assert_eq!(total, 6);
+}
+```
+
+We can't use `v1_iter` after the call to `sum` since `sum` takes ownership of the iterator.
+
+### Iterator Adaptors: Iterator Methods that Produce Other Iterators
+Chaining iterator adaptors allows for complex actions to be performed on a single line, which is
+neato. Remember that iterators are lazy, though, so you have to call a consuming adaptor (such as
+`collect`), or put the chain in a for loop, to get the results of the new iterator.
+```rust
+let v1: Vec<i32> = vec![1, 2, 3];
+
+let v2: Vec<_> = v1.iter().map(|x| x + 1).collect();
+
+assert_eq!(v2, vec![2, 3, 4]);
+```
+
+### Using Closures that Capture Their Environment
+TODO
+
+### Creating Our Own Iterators with the `Iterator` Trait
