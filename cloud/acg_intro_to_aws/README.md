@@ -3,6 +3,8 @@ Seems to be roughly equivalent to AWS' own "AWS Technical Essentials" course
 (https://d1.awsstatic.com/training-and-certification/classroom-training/aws-technical-essentials.pdf)
 - ACG's course does seem to be missing something that covers the "Monitoring, Optimization, and
   Serverless" module...
+- I'm not covering the Machine Learning chapter because it's not part of the Technical Essentials
+  course
 
 Link: https://learn.acloud.guru/course/intro-to-aws/overview
 
