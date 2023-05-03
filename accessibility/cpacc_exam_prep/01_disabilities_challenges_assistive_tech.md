@@ -137,3 +137,10 @@ Epilepsy/seizure disabilities is a category of disability
 # D. Demographics and Statistics
 
 # E. Disability Etiquette
+
+## Stuff I didn't know
+Some preferences for language:
+- Prefer "Person without disabilities/has a disability" to "disabled person/people".
+- Prefer "People without disabilities" to "able bodied".
+
+Going to change some text above because of this.
