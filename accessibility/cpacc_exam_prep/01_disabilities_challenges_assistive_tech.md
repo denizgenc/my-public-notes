@@ -129,6 +129,9 @@ Patronising
 
 # B. Categories and Characteristics of Disabilities and Associated Barriers
 
+## Stuff I didn't know
+Epilepsy/seizure disabilities is a category of disability
+
 # C. Assistive Technologies and Adaptive Strategies
 
 # D. Demographics and Statistics
