@@ -1,13 +1,14 @@
 # A. Theoretical Models of Disability
 ## Overview
-15% of world population is disabled - largest and fastest growing minority.
+15% of world population have a disability - largest and fastest growing minority.
 
 Society is finally moving towards being more inclusive of this minority, and we need to understand
-what disabled people need, what they don't need, and what we can do to support them.
+what people with a disability need, what they don't need, and what we can do to support them.
 
 People view disability in different ways; none of these views (or models) of disability is complete,
-but by studying multiple we get a more complete picture of what it means to be disabled in society.
-Common **theoretical models** are social, medical, biopsychosocial and functional solutions.
+but by studying multiple we get a more complete picture of what it means to be have a disability in
+society. Common **theoretical models** are social, medical, biopsychosocial and functional
+solutions.
 
 ## Medical Model of Disability
 Summary: **The impairment is the problem**
@@ -16,8 +17,8 @@ In the medical model, the main issue that disability presents is perceived to be
 politically, it focuses attention on health care policy.
 
 It can reduce disability to an issue that only affects an individual, and that it essentially
-creates a "baseline" of function that allows us to differentiate able bodied/minded and disabled
-people.
+creates a "baseline" of function that allows us to differentiate people with and without
+disabilities.
 
 ### Strengths
 - Addresses the biological sources of disabilities, potentially with cures or with ways of managing
@@ -31,13 +32,14 @@ people.
 ## Social Model of Disability
 Summary: **The structures within society are the problem.**
 
-In the social model, the cause of disability lies within the society and environment that disabled
-people find themselves in. This is because things are designed with only able bodied/minded people
-as the target, with little (or only retroactive) consideration for disabled people.
+In the social model, the cause of disability lies within the society and environment that people
+with disabilities find themselves in. This is because things are designed with only able
+bodied/minded people as the target, with little (or only retroactive) consideration for people with
+disabilities.
 
-Therefore the issues are with re-aligning society in order to integrate disabled people better. The
-onus is put on designers, architects, organisers, etc to be accessible, not for disabled
-people to make adjustments themselves.
+Therefore the issues are with re-aligning society in order to integrate people with disabilities
+better. The onus is put on designers, architects, organisers, etc to be accessible, not for people
+with disabilities to make adjustments themselves.
 
 ### Strengths
 - Tries to achieve a society that is accessible by default
@@ -82,8 +84,8 @@ Related to the "charity model".
 
 ### Weaknesses
 - Creates legally-defined category of people who are "needy", which is stimatising
-  - This also creates the problem that some people who are disabled who might not meet the (often
-    arbitrary) thresholds, which causes stress for both the disabled and wider society. Think DWP
+  - This also creates the problem that some people who have disabilities who might not meet the
+    (often arbitrary) thresholds, which causes stress for both them and wider society. Think DWP
     disability assessments.
 - Essentially fascist
 
@@ -119,7 +121,7 @@ Most evident among the Deaf community, who originated this model. Not hearing lo
 - Strong affiliation with a group can alienate its members from wider society
 
 ## Charity Model
-Summary: **Disabled people are unfortunate and needy**
+Summary: **People with disabilities are unfortunate and needy**
 
 ### Strengths
 Can inspire people to help
