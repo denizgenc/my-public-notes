@@ -76,7 +76,135 @@ Examples of accomodation in employment:
 # B. Benefits of Accessibility
 
 # C. Web Accessibility
+## Overview
+WCAG = Web Content Accessibility Guidelines
+
+Layers of guidance:
+- 4 high-level principles
+- 13 general guidelines
+- 78 testable success criteria
+- An illustrative collection of techniques and common failures
+
+### The 4 Principles
+Using the POUR mnemonic:
+- Perceivable
+- Operable
+- Understandable
+- Robust
+
+### 3 Levels of WCAG
+We most commonly expect at least AA.
+1. A: Fundamental barriers to access. Level A provides minimal accessibility.
+2. AA: All of A plus more nuanced barriers. AA provides accessibility for most people.
+3. AAA: Includes A and AA, most difficult to achieve.
+
+## Perceivable
+Use multiple different senses
+- alt-text for images
+- Captions for audio
+- Semantic content
+- Consider low colour vision and contrast
+
+## Operable
+Users have to be able to use the interface
+- Allow keyboards to do everything
+- Give users enough time to read and use content
+- Don't create rapidly flashing content
+- Skip to main content links
+- Allow for inputs beyond a keyboard - touch screen, voice, etc
+
+## Understandable
+Users have to be able understand the content, not just operate it.
+- Make content readable and understandable - e.g. identify language of content
+- Make content predictable - don't shift layout from page to page
+- Help users avoid and correct mistakes - e.g. in forms, spellcheck, etc
+
+## Robust
+Content must be robust enough that it can be interpreted reliably by a wide variety of user agents,
+including assistive technologies.
+- Maximise compatibility with current and future user tools - e.g. correctly identify the name, role
+  and value for elements
 
 # D. Universal Design for Learning
+## Overview
+> Universal Design for Learning (UDL) is a framework of principles and guidelines for minimizing
+> barriers and maximizing learning. It emphasizes flexibility by asking teachers to provide multiple
+> ways of presenting information and learning activities, and in the ways that students can
+> demonstrate their knowledge.
+
+## Multiple Means of Engagement
+Make students care about what they're learning.
+- Interest: Spark excitement and curiosity
+- Sustaining effort and persistence: Tackle challenges with focus and determination
+- Self-regulation: Harness the power of emotions and motivation in learning
+
+## Multiple Means of Representation
+Present the information in different ways to cater to different preferences and abilities (and also
+reinforce preceding presentations of information).
+
+Provide options for:
+- Perception: Interact in multiple different modes. Classic visual/auditory/kinaesthetic
+- Language and symbols: Communicate through languages that create a shared understanding (?)
+- Comprehension: Construct meaning and generate new understandings
+
+## Multiple Means of Action and Expression
+Provide learners different ways of showing they understand something they've learned.
+
+Provide options for:
+- Physical action: interact with materials and tools
+- Expression and communication
+- Executive function
+
+Examples: Calculators, geometric sketchpads; posted goals, objectives; software that works
+seamlessley with keyboard alternatives
 
 # E. Usability and User Experience (UX)
+## Key Terms
+Accessibility - the means by which people can perceive, understand, navigate and interact with
+things.
+
+Usability - focuses on ease of use. Someone should be able to easily access something, use it, and
+complete their desired task. A highly usable product reduces cognitive load so the user can achieve
+their goals quickly. A highly usable product is also accessible (allows for diverse and equivalent
+means of use)
+
+Cognitive load - refers to the amount of effort exerted/required while reasoning and thinking. When
+this load is high, thought processes are potentially interfered with, which is an issue. Someone
+might lose track of their overall goal if they have to concern themselves with the specifics of
+interacting with something.
+
+User experience (UX) - includes usability, but is comprehensive of a person's end-to-end experience
+with the thing, including the emotional dimension: desire, joy, meaning, reflection, value or
+frustration that they experience.
+
+## Differences Between Usability and User Experience.
+### Usability
+Usability is a **part** of UX.
+
+Three key needs to consider with usability:
+- Easy to use for the first time
+- Users must be able to achieve goal efficiently
+- It should be memorable so later uses can be even more efficient
+
+### User Experience
+Concerned with the **entire journey** a user has in encountering, using and revisting something,
+including:
+- Becoming aware of the thing
+- Acquiring or accessing it
+- Using it for the first time
+- Using it subsequent times
+- One's feelings about it
+
+Core components of UX:
+- Usability
+- Usefulness
+- Desirability
+- Accessibility
+- Credibility (user must be able to trust the product, in terms of quality, security and privacy)
+
+### Accessibility and Usability
+Accessibility and usability are parts of each other.
+
+However, while accessibility has concrete standards, there are none for usability. Evaluating
+usability involves both qualitative and quantitative methods; accessibility is mostly quantitative
+(since the criteria is mostly objective).
