@@ -41,8 +41,8 @@ services](https://learn.microsoft.com/en-gb/training/modules/describe-azure-stor
 
   Storage accounts require globally unique names, so in this sense they're like AWS S3, but storage
   accounts offer multiple storage types simultaneously:
-  - Azure Blobs == S3
-  - Azure Files == EFS (+ support for SMB)
+  - Azure Blobs == S3 ; has hot, cool, cold and archive access tiers
+  - Azure Files == EFS ; a system for hosting an NFS or SMB share (EFS doesn't support SMB!)
   - Azure Disks == EBS
   - Azure Queues == SQS
-  - Azure Tables == Uhh, what's that nosql thing AWS offers?
+  - Azure Tables == DynamoDB
