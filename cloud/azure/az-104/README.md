@@ -13,3 +13,7 @@ This path itself has 3 other learning paths as prerequisites:
 I would have created subdirectories for those paths but I'm on the third one right now and I only
 just thought to take notes. To reflect these prequisites in notes I will compile them all in
 [`00_initial_impressions.md`](00_initial_impressions.md).
+- Oh there's a page for services comparison on Azure's website:
+  https://learn.microsoft.com/en-us/azure/architecture/aws-professional/services
+
+  It's basically what that initial impressions file is mostly about

@@ -46,3 +46,46 @@ services](https://learn.microsoft.com/en-gb/training/modules/describe-azure-stor
   - Azure Disks == EBS
   - Azure Queues == SQS
   - Azure Tables == DynamoDB
+
+From [Describe Azure identity, access, and
+security](https://learn.microsoft.com/en-gb/training/modules/describe-azure-identity-access-security/):
+- Entra ID is Microsoft's system for managing sign-ins to their cloud apps (e.g. Office 365). It's
+  also offered to Azure users as a mechanism for managing identity and authentication in their cloud
+  applications.
+  - Entra ID is not a replacement for on-prem AD, since it doesn't do the same things (I think?);
+    however you can connect it with your AD to synchronise identities on your local domain with the
+    ones used by your cloud apps, and allows you to use features that Entra ID provides (e.g. SSO
+    and MFA).
+- Entra Domain Services is a managed Domain Controller for Active Directory. Basically instead of
+  maintaining your own DC inside an Azure VM, you can use Entra Domain Services instead, and have it
+  be automatically patched etc.
+- Azure RBAC (?) == AWS IAM
+  - RBAC works on scopes, and they're hierarchical: Management groups > subscriptions > resource
+    groups > resources. In other words, if someone is given a role over a subscription, they have
+    the same permissions on all the resource groups inside that subscription.
+  - RBAC has a bunch of different roles. In terms of permissions granted, they are: Owner >
+    Contributor > Custom roles > Resource-specific > Reader
+
+Assorted other notes from various modules in the [Microsoft Azure Fundamentals: Describe Azure
+management and governance
+](https://learn.microsoft.com/en-us/training/paths/describe-azure-management-governance/) learning
+path:
+- You can tag stuff in Azure too
+- The way things get made is through "Azure Resource Manager", which is the system/API that you talk
+  to when you use the Azure Portal or the CLI.
+- ARM Templates are a JSON format for describing infrastructure that can then be deployed to Azure
+  through `az deployment group create` (given the resource group you will be deploying to already
+  exists). The syntax for ARM templates is a little obtuse though.
+- Bicep is basically a custom language that compiles to ARM Templates (though you can deploy with
+  them directly, again with `az deployment group create`). Think of it as Azure specific Terraform.
+- Azure Policy is like AWS Config - it enforces certain conditions on resources (e.g. all resources
+  must be tagged). Policies can even actively remediate violations by making changes to resources
+  that do not comply; however users can flag the resource as an "exception".
+  - Multiple policies can be grouped together into an initiative
+- Resource locks prevent resources being modified/deleted. First the lock must be removed, and you
+  can assign permissions to locks and resources separately.
+- Azure Advisor == AWS Trusted Advisor. Does reliability, security, performance, "operational
+  excellence" and costs checks against your resources.
+- Azure Monitory == AWS CloudWatch. Provides visibility on metrics and logs coming from your various
+  resources. You can set alerts with it.
+  - Azure Log Analytics *seems* to be like CloudWatch logs? I'm not too sure though.
