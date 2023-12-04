@@ -44,7 +44,7 @@ Bisecting
 `git rebase $commit_ref` re-commits everything it touches, giving it new hashes - even if those
 commits were not changed at all. So you should try to only go back as far as necessary.
 
-No. 1 piece of advice Robert can give on Git:  
+No. 1 piece of advice the speaker can give on Git:
 `git config --global merge.conflictstyle diff3`
   - This is a different version of the merge conflict message that gives more information,
     which is better. So do some research and use it.
