@@ -37,5 +37,9 @@ just thought to take notes. To reflect these prequisites in notes I will compile
   - From
     [02_identities_governance/01_configure_user_group_accounts.md](02_identities_governance/01_configure_user_group_accounts.md):
     - Are security groups supposed to be like IAM roles?
+      - No, there's roles that people in the group can have, but they're separate. AWS IAM had
+        ["user groups"](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups.html) which seems
+        broadly similar
     - Only administrators can create security groups, but which kind of admin? (I've heard of
       "global" and "user" admins...)
+      - Global admins can create other admins. Presumably, user admins can't
