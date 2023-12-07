@@ -33,3 +33,9 @@ just thought to take notes. To reflect these prequisites in notes I will compile
     it is moved with the parent resource.  If the parent resource doesn't support move, the child
     resource can't be moved.
 
+- Identities and governance
+  - From
+    [02_identities_governance/01_configure_user_group_accounts.md](02_identities_governance/01_configure_user_group_accounts.md):
+    - Are security groups supposed to be like IAM roles?
+    - Only administrators can create security groups, but which kind of admin? (I've heard of
+      "global" and "user" admins...)
