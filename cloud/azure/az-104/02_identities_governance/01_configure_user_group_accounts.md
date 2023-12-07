@@ -16,8 +16,8 @@ User accounts require both a display name ("Deniz Genc") and a user account name
 privileges, etc) are stored in the profile.
 
 Bulk creation of user accounts is also supported, by uploading a CSV with various fields (Azure
-portal -> Users -> All users -> Bulk operations). There are templates for these CSVs, available from
-Azure.
+portal -> Azure Active Directory -> Users -> All users -> Bulk operations). There are templates for
+these CSVs, available from Azure.
 - Doing bulk operations generates a results file which lists any errors encountered during the
   process, along with a resason for the error (e.g. user account name collision).
 
@@ -33,9 +33,12 @@ When a group is created, you can configure different membership regimes:
   profiles.  For example, an admin group will automatically add all admins in the directory. When a
   user account's attributes change, they may be added to or removed from a group, depending on the
   rules.
+  - Requires AD Premium P1 or P2 licence
+  - An example of a rule: Property = `jobTitle`; Operator =  Equals; Value = "Cloud Administrator"
 - Dynamic device (security groups only): Same as the above, but for device attributes - I assume
   this is to ensure that devices are enrolled in an MDM programme, or are accessing resources from a
   specified network (e.g. a work VPN).
+  - Requires AD Premium P1 or P2 licence
 
 ## Security groups
 Are these supposed to be like IAM roles?
