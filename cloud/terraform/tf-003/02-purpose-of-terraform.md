@@ -17,7 +17,7 @@ Clusters](https://developer.hashicorp.com/terraform/tutorials/networking/multicl
 It's basically about deploying a cluster to AWS EKS and to Azure AKS. Things to note:
 - The [example repo](https://github.com/hashicorp/learn-terraform-multicloud-kubernetes) has
   separate `eks` and `aks` folders. They mention that they could all be in the same folder, but it's
-  better to keep logically-related components together.
+  better to keep logically related components together.
 - There's a thing called Consul that allows two Kubernetes deployments to be tied together. What's
   important is that **they're using the `terraform_remote_state` data source** to get outputs from
   the EKS and AKS deployments and use them in the Consul Terraform.
