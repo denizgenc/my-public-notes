@@ -52,3 +52,7 @@ The exam aims to test the understanding of **9 objectives**. These are:
 9. Understand HCP Terraform capabilities
    1. Explain how HCP Terraform helps to manage infrastructure
    2. Describe how HCP Terraform enables collaboration and governance
+
+There is also a [learning
+path](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-study-003)
+with links to all the documentation and tutorials also found in the exam content list.
