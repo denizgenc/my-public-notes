@@ -66,8 +66,8 @@ for all the details (including the learning objectives for each task statement).
 - Task Statement 5.2: Recognise governance and compliance regulations for AI systems
 
 ## Structure of course
-To cover the above outline, the "Standard Exam Prep Plan" links to a bunch of courses that should be
-prepare me to learn all of the above. These courses are, in order:
+To cover the above outline, the "Standard Exam Prep Plan" links to a bunch of courses that should
+cover all of the above. These courses are, in order:
 
 1. [Fundamentals of Machine Learning and Artificial Intelligence](https://explore.skillbuilder.aws/learn/course/19578/fundamentals-of-machine-learning-and-artificial-intelligence)
 2. [Exploring Artificial Intelligence Use Cases and
