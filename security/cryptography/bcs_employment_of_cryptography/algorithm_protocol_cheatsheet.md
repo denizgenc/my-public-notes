@@ -203,14 +203,14 @@ knowledge.
 - Secure Hash Algorithm 1 (published 1995, FIPS 180-4)
 - Based on MD5's principles
 - Cryptographic hash algorithm
-  - Hash length: 160 bits (40 hex digits
+  - Hash length: 160 bits (40 hex digits)
 - NIST recommends against SHA-1 if collision resistance is required
   - Security based on length of hash, hash not long enough any more
 - Replaced by SHA-2 and SHA-3
 
 ## SHA-2
 - Secure Hash Algorithm 2 (published 2001)
-- Based on SHA-2
+- Based on SHA-1
 - Cryptographic hash algorithm
   - Hash length: 224, 256, 384, or 512 bits
 - So far it is secure
@@ -228,13 +228,13 @@ knowledge.
 - Digital Signature Algorithm (FIPS 186, published 1994)
 - Uses a variant of the ElGamal signature scheme
   - Key size: 2048 or 3072 bits (as per NIST 800-57)
-- Use SHA-2 for hash
+- Uses SHA-2 for hash
 
 ## ECDSA
 - Elliptic Curve Digital Signature Algorithm
 - Instead of ElGamal, use elliptic curves to encrypt hash
   - Key size: 160 bits or more
-- Use SHA-2 for hash
+- Uses SHA-2 for hash
 
 ## A5
 - Family of algorithms, starting with A5/1 (design leaked in 1994, reverse engineered 1999)
@@ -304,7 +304,7 @@ knowledge.
 - Two authentication modes:
   - Open System Authentication - no auth. Client must have correct keys to encrypt/decrypt WEP
     frames
-  - Shared Key authentication - authenticate using this key. Key then used for encrypting WEP frames
+  - Shared Key authentication - authenticate using key. Key then used for encrypting WEP frames
     using RC4.
 - Main flaw is that IV is too short (24 bits), so will be repeated
   - Enables the RC4 key to be recovered in minutes
@@ -313,7 +313,7 @@ knowledge.
 # WPA
 - Wi-Fi Protected Access (published 2002, deprecated 2012)
 - Intermediate solution for WPA2 incompatible devices
-- Used Temporal Key Integrity Protocol (TKIP
+- Used Temporal Key Integrity Protocol (TKIP)
   - Key size: 64 bit or 128 bit
   - Basically like RC4 in WEP, but "mixes" key and IV instead of just concatenating them, and
     implements a counter and Message Integrity Check (i.e. a MAC)
