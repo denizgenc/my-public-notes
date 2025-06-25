@@ -86,6 +86,6 @@ path:
   can assign permissions to locks and resources separately.
 - Azure Advisor == AWS Trusted Advisor. Does reliability, security, performance, "operational
   excellence" and costs checks against your resources.
-- Azure Monitory == AWS CloudWatch. Provides visibility on metrics and logs coming from your various
+- Azure Monitor == AWS CloudWatch. Provides visibility on metrics and logs coming from your various
   resources. You can set alerts with it.
   - Azure Log Analytics *seems* to be like CloudWatch logs? I'm not too sure though.
