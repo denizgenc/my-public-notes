@@ -2,9 +2,12 @@
 
 Assorted notes to get ready for this cert.
 
-I'm going to be following AWS' own "Standard Exam Prep Plan", available here:
-https://explore.skillbuilder.aws/learn/learning-plans/2193/plan - however it's marked as
-"[RETIRING]" so I probably decided to start studying for this cert at a bad time
+There's two steps to get ready:
+1. Follow the [AWS Artificial Practitioner Learning
+   Plan](https://skillbuilder.aws/learning-plan/G8ENMJ5QBE/aws-artificial-intelligence-practitioner-learning-plan/SU2A1EJM1A) for the prerequisite knowledge
+2. Then go through the [Exam Prep
+   Plan](https://skillbuilder.aws/learning-plan/3NRN71QZR2/exam-prep-plan-aws-certified-ai-practitioner-aifc01--english/FBV4STG94B)
+   for the cert.
 
 ## Objectives
 From the [exam
@@ -71,24 +74,18 @@ cover all of the above. These courses are, in order:
 
 1. [Fundamentals of Machine Learning and Artificial Intelligence](https://explore.skillbuilder.aws/learn/course/19578/fundamentals-of-machine-learning-and-artificial-intelligence)
 2. [Exploring Artificial Intelligence Use Cases and
-   Applications](https://explore.skillbuilder.aws/learn/course/19579/exploring-artificial-intelligence-use-cases-and-applications)
+   Applications](https://skillbuilder.aws/learn/A3U2U9VGMX/exploring-artificial-intelligence-use-cases-and-applications/M12JQTFKB5)
 3. [Responsible Artificial Intelligence
-   Practices](https://explore.skillbuilder.aws/learn/course/19603/responsible-artificial-intelligence-practices)
+   Practices](https://skillbuilder.aws/learn/1H631ZWCTP/responsible-artificial-intelligence-practices/BN51NEFJNG)
 4. [Developing Machine Learning
-   Solutions](https://explore.skillbuilder.aws/learn/course/19609/developing-machine-learning-solutions)
+   Solutions](https://skillbuilder.aws/learn/VSS1JQ8QWW/developing-machine-learning-solutions/HR1KN4V89V)
 5. [Developing Generative Artificial Intelligence
-   Solutions](https://explore.skillbuilder.aws/learn/course/19610/developing-generative-artificial-intelligence-solutions)
-6. [Essentials of Prompt
-   Engineering](https://explore.skillbuilder.aws/learn/course/19611/essentials-of-prompt-engineering)
-7. [Optimizing Foundation
-   Models](https://explore.skillbuilder.aws/learn/course/19613/optimizing-foundation-models)
-8. [Security, Compliance, and Governance for AI
-   Solutions](https://explore.skillbuilder.aws/learn/course/19614/security-compliance-and-governance-for-ai-solutions)
-9. [Generative AI for
-   Executives](https://explore.skillbuilder.aws/learn/course/16666/generative-ai-for-executives)
-10. [Amazon Q Business Getting
-    Started](https://explore.skillbuilder.aws/learn/course/19320/amazon-q-business-getting-started)
-11. [Amazon Bedrock Getting
-    Started](https://explore.skillbuilder.aws/learn/course/17508/amazon-bedrock-getting-started)
+   Solutions](https://skillbuilder.aws/learn/PWJCMNXWHT/developing-generative-artificial-intelligence-solutions/JFB95SXNPF)
+6. [Optimizing Foundation
+   Models](https://skillbuilder.aws/learn/CDYTAJCKGY/optimizing-foundation-models/PVR1FRGN1T)
+7. [Security, Compliance, and Governance for AI
+   Solutions](https://skillbuilder.aws/learn/YFACXFGBSJ/security-compliance-and-governance-for-ai-solutions/YZTVAG8P4Q)
+8. [Essentials of Prompt
+   Engineering](https://skillbuilder.aws/learn/XBNAVKA88J/essentials-of-prompt-engineering/9T9Q45EDTV)
 
 Links above are to the AWS Skill Builder courses; will need to log on to access them.
