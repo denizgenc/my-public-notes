@@ -88,4 +88,6 @@ cover all of the above. These courses are, in order:
 8. [Essentials of Prompt
    Engineering](https://skillbuilder.aws/learn/XBNAVKA88J/essentials-of-prompt-engineering/9T9Q45EDTV)
 
+The notes to each of these will be found in the [`aws_ai_practitioner_learning_plan`](./aws_ai_practitioner_learning_plan) folder.
+
 Links above are to the AWS Skill Builder courses; will need to log on to access them.
