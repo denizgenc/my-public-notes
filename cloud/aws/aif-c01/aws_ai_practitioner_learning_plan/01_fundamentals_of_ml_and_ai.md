@@ -177,7 +177,7 @@ Only one service here - **Amazon SageMaker**.
 - Build, train and deploy ML models from scratch
 
 ### AI/ML Services
-Basically a bunch of maanaged offerings on specific use cases. These can be broken down into
+Basically a bunch of managed offerings on specific use cases. These can be broken down into
 different domains.
 
 #### Text and documents

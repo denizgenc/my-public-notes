@@ -50,7 +50,7 @@ Used by the following industries (among others):
 - Healthcare: medical imaging (is that a tumour?)
 - Security: facial recognition in either public surveillance or home security cameras
 
-## Natual language processing
+## Natural language processing
 Field of AI, again revolutionised by deep learning.
 - Text classification
 - Sentiment analysis
@@ -104,7 +104,7 @@ can be better (and more cheaply) solved using more traditional approaches.
 # Machine Learning Techniques and Use Cases
 Three broad ML techniques:
 - Supervised learning (ML is trained on labelled data)
-- Unsupervised learnin (ML is trained on unlabelled data)
+- Unsupervised learning (ML is trained on unlabelled data)
 - Reinforcement learning (ML is given a performance score, and only some of the data is labelled)
 
 There's different use cases for each of the above techniques.
