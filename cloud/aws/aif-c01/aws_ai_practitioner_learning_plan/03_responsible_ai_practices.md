@@ -18,9 +18,9 @@ Responsible AI means:
 
 All types of AI need to be used responsibly (not just generative models)
 
-# Challenges in Traditional and Generative AI
-## Biases
-### Accuracy of models
+## Challenges in Traditional and Generative AI
+### Biases
+#### Accuracy of models
 Biggest problem developers face is accuracy. Both traditional and generative models can only output
 based on the dataset they've been trained on, therefore devs need to be aware of bias and variance
 in models.
@@ -35,7 +35,7 @@ This is basically overfitting.
 
 Bias vs variance is an issue of under- and overfitting. Hence it's difficult to balance.
 
-### Strategies to remediate bias/variance
+#### Strategies to remediate bias/variance
 - Cross-validation: train several models on subsets of the data; then evaluate on complentary
   subsets
 - Increase training dataset size
@@ -45,14 +45,14 @@ Bias vs variance is an issue of under- and overfitting. Hence it's difficult to 
 - Dimension reduction: reduces overfitting (?)
 - Stop training early: reduces overfitting
 
-## Challenges of generative AI
+#### Challenges of generative AI
 - Toxicity
 - Hallucinations
 - IP theft
 - Plagiarism/cheating
 - Social disruption
 
-# Core dimensions of Responsible AI
+## Core dimensions of Responsible AI
 - Fairness: basically social considerations (making sure the AI system is not discriminatory and
   complies with the law)
 - Explainability: capability of the model to explain or justify its decisions
@@ -69,10 +69,134 @@ Bias vs variance is an issue of under- and overfitting. Hence it's difficult to 
   environment it is run in
 - Controllability: ability to monitor and align the AI system's behaviour to human values.
 
-## Business benefits of responsible AI
+### Business benefits of responsible AI
 - Increased trust and reputation
 - Regulatory compliance
 - Mitigating risks
 - Competitive advantage (in terms of marketing, presumably)
 - Improved decision-making (e.g. dimensions of fairness, safety and controllability prevent biased
   decisions)
+
+# Developing responsible AI systems
+## Amazon Services and tools for Responsible AI
+Both Amazon Bedrock and SageMaker allow you to evaluate FMs. They have **metrics for accuracy,
+toxicity, etc**, and allow for both automated evaluation and human evaluation.
+- The Bedrock version is called "Model evaluation"
+- On SageMaker, it's called "AI Clarify".
+  - AI Clarify also can spot potential bias (gender, age, etc) in datasets
+  - For certain use cases (tabular, NLP, computer vision), it also can provide scores for what
+    features of the input contributed to the model's prediction.
+
+### Guardrails for Amazon Bedrock
+This is something you can implement yourself when using FMs with Bedrock. Allows you to:
+- Block certain topics
+- Filter content (hateful, sexual, violent, etc)
+- Redact PII
+
+You can make multiple guardrails with different configurations for separate use cases.
+
+### Monitoring and human reviews
+- SageMaker Model Monitor
+- Amazon Augmented AI (A2I) -> builds workflows for reviewing ML predictions
+
+### Governance
+- SageMaker Role Manager - RBAC for SageMaker
+- SageMaker Model Cards
+- SageMaker Model Dashboard - Grafana for AI or something
+
+### Transparency
+AWS AI Service Cards -> a form of AI documentation.
+
+## Responsible Considerations to select a model
+- Narrow down your use case
+- Choose a model based on that use case
+- Consider sustainability when picking a model as well
+
+## Responsible preparation for datasets
+Make sure dataset is balanced/unbiased
+
+Ensure that the data collection is inclusive.
+
+Curate your data in 3 steps:
+1. Data preprocessing
+   - Checking if your data is accurate and unbiased
+2. Data augmentation
+   - Add data from underrepresented groups, if necessary
+3. Regular auditing
+   - Check back frequently to ensure dataset is good, re-curate as necessary
+
+# Transparent and Explainable AI models
+Transparency answers **how** a response came about.
+
+Explainability answers **why**.
+
+Transparent & explainable contrasts with black-box models.
+
+Benefits:
+- Increased user trust
+- Eases debugging and optimisation
+- Improves understanding of model's decision-making process (where that is important, e.g. medical
+  use cases)
+
+## Solutions for transparent and explainable models
+There's no standard solution.
+
+Here's some approaches:
+- Explainability frameworks: SHapley Additive exPlanations (SHAP), Local Interpretable
+  Model-Agnostic Explanations (LIME)
+- Documentation
+- Monitoring/auditing
+- Human oversight
+
+### AWS tools for transparency
+Transparency:
+- AWS AI Service Cards
+- SageMaker Model Cards
+
+Explainability
+- SageMaker AI Clarify
+- SageMaker AutoPilot
+
+## Model Trade-offs
+### Interpretability trade-offs
+Interpretability is access into a system so you can figure out why an output occurs, based on the
+weights/features of the AI system. Different from "explainability" in that explainability is
+analysing the decision process in human terms, not mathematical.
+
+The more complex an AI system is, the more difficult it is to interpret. However, we also get an
+increase in performance. There's a sliding scale between "high interpretability, low performance"
+(e.g. linear regression model) and "low interpretability, high performance" (e.g. a deep neural
+network)
+
+### Safety and transparency trade-offs
+- More complex models are less transparent, but more accurate
+- Techniques that improve data privacy can improve safety but reduce transparency
+
+### Model controllability
+More controllable usually means less complex -> potentially less accurate. But controllable is nice
+since it allows us to fine tune responses (for safety and accuracy).
+
+## Principles of Human-Centred Design for Explainable AI
+### Design for amplified decision-making
+For high stress/pressure situations. Consider:
+- Clarity
+- Simplicity
+- Usability
+
+### Design for unbiased decision-making
+Consider:
+- Transparency
+- Fairness
+- Training
+
+### Design for human and AI learning
+Consider:
+- Cognitive apprenticeship - allow AI systems to learn from human experts, and/or learn from real
+  (or simulated) scenarios
+- Personalisation
+- User-centred design
+
+### Reinforcement learning from human feedback (RLHF)
+Using human feedback in the reinforcement (RL) learning reward function.
+
+You can use **SageMaker Ground Truth** for this.
