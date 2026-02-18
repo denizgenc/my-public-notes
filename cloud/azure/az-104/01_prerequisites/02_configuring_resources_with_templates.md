@@ -17,13 +17,18 @@ It's a JSON object with the three following required keys:
 - `"$schema"` - a link to a JSON schema file that describes the version of the language. Currently
   this is set to the value
   `"http://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#"`.
+  - `deploymentTemplate.json` has a specific meaning - it means this template is scoped to a
+    resource group. There are other template schemas that can be scoped to subscriptions or
+    managment groups.
 - `"contentVersion"` - required but can take any value (including an empty string). This is used to
   make sure the right version of the template is being applied - to prevent downgrades (presumably)
+  - This is generally overlooked since versioning/version control is better handled within git, etc.
 - `"resources"` - a list of values that represent resources to deploy
 
 There are additional optional keys:
 - `"parameters"` - like variables in Terraform. A JSON object which represents values that can be
   passed into other parts of the template. You are limited to 256 parameters in any one template.
+  - A separate parameter file can be used to provide these parameters.
 - `"variables"` - more like constants, or alternatively locals in Terraform. A JSON object which
   holds values that "are used as JSON fragments", presumably to make the template less verbose if
   certain fragments are repeated.
