@@ -64,5 +64,10 @@ Azure specific Terraform, from Microsoft. Advantages over templates:
   - you may still have to manually manage dependencies in some situations, like in Terraform.
 - Type validation and IntelliSense
 
+Bicep files are compiled into ARM templates and then deployed.
+
+If you already have a bunch of ARM templates, you can use `az bicep decompile` on an ARM template to
+convert it into a Bicep file (though this isn't 100% guaranteed to work)
+
 # QuickStart templates
 Online catalogue of community-provided templates for certain solutions (e.g. deploying a django app)
